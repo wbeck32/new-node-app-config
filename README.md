@@ -15,9 +15,11 @@
 
 
 `"scripts": {
-    "test": "mocha tests",
-    "start": "npm test -- -w"
-  }`
+		"test:watch:nodemon": "nodemon --watch src --watch tests --exec 'npm test'",
+		"test:watch": "npm test -- -w",
+		"test": "mocha tests --reporter mocha-better-spec-reporter",
+		"start": "npm run test:watch:nodemon"
+	},`
 
 ### npm install devDependencies command
 
