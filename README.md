@@ -26,3 +26,16 @@
 `
 
 ### alias to run the script, copy these files and start npm init
+
+## TODOS
+
+- make an alias for the command
+
+- add build file structure to script
+
+- configure .npmrc and add to the files
+
+- make .eslintrc more robust
+- call npm init after files have been copied
+- alternately create package.json with mostly default values and copy the test scripts into it
+
