@@ -1,28 +1,112 @@
 {
-	"ecmaFeatures": {},
-	"env": {
-		"node": false,
-		"mocha": false,
-		"es6": true
-	},
-	"extends": "eslint:recommended",
-
-	"rules": {
-		"no-dupe-keys": 1,
-		"no-extra-parens": 1,
-		"no-extra-semi": 1,
-		"no-irregular-whitespace": 1,
-		"dot-notation": 1,
-		"no-multi-spaces": 1,
-		"vars-on-top": 1,
-		"handle-callback-err": 1,
-		"new-cap": 1,
-		"new-parens": 1,
-		"no-var": 1,
-		"no-console": "warn",
-		"indent": ["error", 4],
-		"linebreak-style": ["error", "unix"],
-		"quotes": ["error", "single"],
-		"semi": ["error", "always"]
-	}
+  "env": {
+    "es6": true,
+    "mocha": true,
+    "mongo": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "block-spacing": ["error", "always"],
+    "brace-style": [
+      "warn",
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "comma-spacing": [
+      "error",
+      {
+        "after": true,
+        "before": false
+      }
+    ],
+    "curly": ["warn", "multi-line"],
+    "indent": ["error", 2],
+    "key-spacing": [
+      "error",
+      {
+        "afterColon": true,
+        "beforeColon": true,
+        "mode": "strict"
+      }
+    ],
+    "linebreak-style": ["error", "unix"],
+    "newline-per-chained-call": [
+      "error",
+      {
+        "ignoreChainWithDepth": 2
+      }
+    ],
+    "no-console": "warn",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 1
+      }
+    ],
+    "no-trailing-spaces": [
+      "error",
+      {
+        "skipBlankLines": false
+      }
+    ],
+    "no-var": "warn",
+    "nonblock-statement-body-position": ["warn", "beside"],
+    "object-curly-newline": ["warn", "always"],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "next": "block",
+        "prev": "*"
+      },
+      {
+        "blankLine": "always",
+        "next": "block-like",
+        "prev": "*"
+      },
+      {
+        "blankLine": "always",
+        "next": "function",
+        "prev": "*"
+      },
+      {
+        "blankLine": "never",
+        "next": "return",
+        "prev": "*"
+      }
+    ],
+    "prefer-arrow-callback": [
+      "warn",
+      {
+        "allowNamedFunctions": true
+      }
+    ],
+    "prefer-destructuring": [
+      "warn",
+      {
+        "array": true,
+        "object": true
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "sort-keys": [
+      "warn",
+      "asc",
+      {
+        "caseSensitive": false,
+        "natural": true
+      }
+    ]
+  }
 }
